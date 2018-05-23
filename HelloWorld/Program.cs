@@ -157,21 +157,21 @@ namespace HelloWorld
             //} //End switch 
 
             ////Part twelve array examples
-            //string[] foodList = new string[5];
-            //foodList[0] = "Milk";
-            //foodList[1] = "Fruit";
-            //foodList[2] = "Meat";
-            //foodList[3] = "Wine";
-            //foodList[4] = "Bread";
-            //// Console.WriteLine(foodList[0]);
-            //// Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
-            //Console.WriteLine("{3}, {1}, {2}, {0}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
+            string[] foodList = new string[5];
+            foodList[0] = "Milk";
+            foodList[1] = "Fruit";
+            foodList[2] = "Meat";
+            foodList[3] = "Wine";
+            foodList[4] = "Bread";
+            // Console.WriteLine(foodList[0]);
+            // Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
+            Console.WriteLine("{3}, {1}, {2}, {0}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
 
-            //int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 };
-            ////Console.WriteLine(foodAmount[0] + ", " + foodAmount[1] + ", " +
-            //// foodAmount[2] + ", " + foodAmount[3] + ", " + foodAmount[4]);
-            //Console.WriteLine("{3}, {1}, {2}, {0}, {4}", foodAmount[0], foodAmount[1], foodAmount[2], foodAmount[3], foodAmount[4]);
-            //Console.WriteLine(foodList.Length);
+            int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 };
+            //Console.WriteLine(foodAmount[0] + ", " + foodAmount[1] + ", " +
+            // foodAmount[2] + ", " + foodAmount[3] + ", " + foodAmount[4]);
+            Console.WriteLine("{3}, {1}, {2}, {0}, {4}", foodAmount[0], foodAmount[1], foodAmount[2], foodAmount[3], foodAmount[4]);
+            Console.WriteLine(foodList.Length);
 
             //List<string> foodList = new List<string>();//add as many elements as we want this list
             //foodList.Add("Milk");
@@ -202,7 +202,7 @@ namespace HelloWorld
             //List<string> foodList = new List<string>();//add as many elements as we want this list
 
             // Part thirteen while loop example
-            string action = " ";
+           // string action = " ";
             //while (action != "exit")
             //{
 
@@ -232,34 +232,44 @@ namespace HelloWorld
             //    Console.WriteLine("add another? Type exit to quit");
 
             
-            do
-            {
-                Console.WriteLine("What is your rank soldier?");
-                string rank = Console.ReadLine();
+            //do
+            //{
+            //    Console.WriteLine("What is your rank soldier?");
+            //    string rank = Console.ReadLine();
 
-                Console.WriteLine("What is your age soldier?");
-                int age = int.Parse(Console.ReadLine());
-                Console.WriteLine("What is your job soldier?");
-                string job = Console.ReadLine();
+            //    Console.WriteLine("What is your age soldier?");
+            //    int age = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("What is your job soldier?");
+            //    string job = Console.ReadLine();
 
-                if ((rank == "officer") || (age <= 26))
-                {
-                    Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
-                }
-                else if ((job == "cook") || (age >= 26))
-                {
-                    Console.WriteLine("My army has to eat. Pack your pots and pans");
-                }
-                else
-                {
-                    Console.WriteLine("Sorry you are staying home.");
-                }
-                Console.WriteLine("Add another? Type exit to quit");
-                action = Console.ReadLine();
-            } while (action != "exit");
+            //    if ((rank == "officer") || (age <= 26))
+            //    {
+            //        Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
+            //    }
+            //    else if ((job == "cook") || (age >= 26))
+            //    {
+            //        Console.WriteLine("My army has to eat. Pack your pots and pans");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Sorry you are staying home.");
+            //    }
+            //    Console.WriteLine("Add another? Type exit to quit");
+            //    action = Console.ReadLine();
+            //} while (action != "exit");
            
 
+            //Part fourteen for-lop examples
+            //for (int i = 0; i < foodAmount.Length; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
 
+            for (int i = 0; i < foodAmount.Length; i++)
+            {
+                Console.WriteLine("enter a value for " + foodList[i]);
+                foodAmount[i] = int.Parse(Console.ReadLine());
+            }
 
 
         }//Main
