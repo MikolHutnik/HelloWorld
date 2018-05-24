@@ -13,7 +13,7 @@ namespace HelloWorld
             //Console.WriteLine("Hello Wolrd!");
             //string messageOne = "Hello World!";
             //Console.WriteLine(messageOne);
-            //string messageTwo = "I am Spartacus";
+            string messageTwo = "I am Spartacus";
             //Console.WriteLine(messageTwo);
 
             //Part one greetings statement
@@ -21,7 +21,7 @@ namespace HelloWorld
             //string messageTwo = "I am Spartacus";
 
             ////Part two set initial Spartacus attributes
-            //int ageOne = 35;
+            int ageOne = 35;
             //int ageTwo = 45;
             //int ageThree = 80;
             //double heightOne = 72.50;
@@ -29,7 +29,7 @@ namespace HelloWorld
             //double heightThree = 35.12345f;
             //float weightOne = 210.0284606f;
             //float weightTwo = 331.12345678f;
-            //bool isGodLikeOne = true;
+            bool isGodLikeOne = true;
             //bool isGodLikeTwo = false;
             //char genderMale = 'M';
             //char genderFemale = 'F';
@@ -157,21 +157,21 @@ namespace HelloWorld
             //} //End switch 
 
             ////Part twelve array examples
-            string[] foodList = new string[5];
-            foodList[0] = "Milk";
-            foodList[1] = "Fruit";
-            foodList[2] = "Meat";
-            foodList[3] = "Wine";
-            foodList[4] = "Bread";
-            // Console.WriteLine(foodList[0]);
-            // Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
-            Console.WriteLine("{3}, {1}, {2}, {0}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
+            //string[] foodList = new string[5];
+            //foodList[0] = "Milk";
+            //foodList[1] = "Fruit";
+            //foodList[2] = "Meat";
+            //foodList[3] = "Wine";
+            //foodList[4] = "Bread";
+            //// Console.WriteLine(foodList[0]);
+            //// Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
+            //Console.WriteLine("{3}, {1}, {2}, {0}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);
 
-            int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 };
-            //Console.WriteLine(foodAmount[0] + ", " + foodAmount[1] + ", " +
-            // foodAmount[2] + ", " + foodAmount[3] + ", " + foodAmount[4]);
-            Console.WriteLine("{3}, {1}, {2}, {0}, {4}", foodAmount[0], foodAmount[1], foodAmount[2], foodAmount[3], foodAmount[4]);
-            Console.WriteLine(foodList.Length);
+            //int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 };
+            ////Console.WriteLine(foodAmount[0] + ", " + foodAmount[1] + ", " +
+            //// foodAmount[2] + ", " + foodAmount[3] + ", " + foodAmount[4]);
+            //Console.WriteLine("{3}, {1}, {2}, {0}, {4}", foodAmount[0], foodAmount[1], foodAmount[2], foodAmount[3], foodAmount[4]);
+            //Console.WriteLine(foodList.Length);
 
             //List<string> foodList = new List<string>();//add as many elements as we want this list
             //foodList.Add("Milk");
@@ -202,7 +202,7 @@ namespace HelloWorld
             //List<string> foodList = new List<string>();//add as many elements as we want this list
 
             // Part thirteen while loop example
-           // string action = " ";
+            // string action = " ";
             //while (action != "exit")
             //{
 
@@ -231,7 +231,7 @@ namespace HelloWorld
             //}
             //    Console.WriteLine("add another? Type exit to quit");
 
-            
+
             //do
             //{
             //    Console.WriteLine("What is your rank soldier?");
@@ -257,7 +257,7 @@ namespace HelloWorld
             //    Console.WriteLine("Add another? Type exit to quit");
             //    action = Console.ReadLine();
             //} while (action != "exit");
-           
+
 
             //Part fourteen for-lop examples
             //for (int i = 0; i < foodAmount.Length; i++)
@@ -265,13 +265,53 @@ namespace HelloWorld
             //    Console.WriteLine(i);
             //}
 
-            for (int i = 0; i < foodAmount.Length; i++)
+
+            string[] pets = new string[5] { "a", "b", "c", "d", "e" };
+
+            for (int i = 0;  i < pets.Length; i++)
             {
-                Console.WriteLine("enter a value for " + foodList[i]);
-                foodAmount[i] = int.Parse(Console.ReadLine());
+                Console.WriteLine(pets[i]);
+
             }
 
+            //for (int i = 0; i < foodAmount.Length; i++)
+            //{
+            //    Console.WriteLine("enter a value for " + foodList[i]);
+            //    foodAmount[i] = int.Parse(Console.ReadLine());
+            //}
 
-        }//Main
+            isGodLikeOne = IsGodLike(ageOne);
+            Console.WriteLine("To say our hero is God like is " + isGodLikeOne);
+            Console.WriteLine("To say our hero is God like is " + isGodLikeOne);
+            Console.WriteLine(Reverse(messageTwo));
+
+        }//Main  
+
+       
+  
+    static bool IsGodLike(int age)
+    {
+        bool status;
+        if (age % 2 == 0)
+        {
+            status = false;
+        }
+        else
+        {
+            status = true;
+        }
+        return status;
+    }
+        static string Reverse(string text)
+        {
+            char[] cArray = text.ToCharArray();
+            string reverse = " ";
+            for (int i = cArray.Length - 1; i > -1; i--)
+            {
+                reverse += cArray[i];
+            }
+            return reverse;
+        }
+
     }//Class
 }//Name Space
